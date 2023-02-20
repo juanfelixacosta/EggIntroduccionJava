@@ -38,6 +38,5 @@ public class Ejercicio6 {
             System.out.println("El segundo numero ingresado " + numero_2 + " no es mayor a 25");
         }
     }
-    }
     
 }

@@ -55,19 +55,23 @@ public class EjercicioAprendizaje11 {
                     System.out.println("La multiplicacion de los numeros " + numero_1 + " * " + numero_2 + " = " + (numero_1 * numero_2));
                     break;
                 case 4:
-                    System.out.println("La division de los numeros " + numero_1 + " / " + numero_2 + " = " + (numero_1 / numero_2));
+                    System.out.println("La division de los numeros " + numero_1 + " / " + numero_2 + " = " + (float)(numero_1 / numero_2));
                     break;
                 case 5:
                     System.out.println("¿Está seguro que desea salir del programa (S/N)?");
                     exit = leer.next().charAt(0);
                     if ('S' == exit || 's' == exit) {
+                        exit = 'S';
                         System.out.println("Se ha salido del programa!!!");
+                        break;
+                    }else if ('N' == exit || 'n' == exit){
+                        exit = 'N';
                         break;
                     }
                 default:
                     System.out.println("Debe indicar una opcion valida entre 1 y 5");
             }
-        } while (opcion != 5);
+        } while (opcion != 5  || exit != 'S') ;
         
     }
     
